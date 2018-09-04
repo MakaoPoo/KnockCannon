@@ -1,14 +1,30 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background-color: #000000;
 }
 
 #game {
   position: absolute;
-  width: 100vh;
+  width: 140vh;
   height: 100vw;
   max-width: 100vw;
   max-height: 100vh;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+}
+
+.tweet-wrapper {
+  position: absolute;
+  display: none;
+  width: 200px;
+  text-align: center;
+  top: 63%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
 }

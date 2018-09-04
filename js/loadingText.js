@@ -57,7 +57,7 @@ class LoadingText{
     let height = canvas.height;
     let fontSize = width/10;
     ctx.font =  fontSize+"px 'ＭＳ ゴシック'";
-    ctx.fillStyle="#ffffff";
+    ctx.fillStyle = "#ffffff";
     ctx.clearRect(0, 0, width, height);
     let textLength = obj.loadingTextStr.length;
     let loadY = new Array(textLength);
