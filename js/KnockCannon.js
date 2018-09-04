@@ -53,28 +53,26 @@ function loadGraph() {
 function mainStart() {
   switch(getDevice()) {
     case "phone":
-    $('#game').on('touchmove', function(event) {
-      event.preventDefault();
+    $('body').on('touchmove', function(event) {
       // 座標の取得
       let width = $('#game').width();
       let scale = 650/width;
-      let touchX = event.touches[0].pageX - $(event.target).offset().left;
+      let touchX = event.touches[0].pageX - $('#game').offset().left;
       playerX = (touchX-30)*scale;
     });
     break;
     case "pc":
-    $('#game').on('mousemove', function(event) {
-      event.preventDefault();
+    $('body').on('mousemove', function(event) {
       // 座標の取得
       let width = $('#game').width();
       let scale = 650/width;
-      let touchX = event.originalEvent.clientX - $(event.target).offset().left;
+      let touchX = event.originalEvent.clientX - $('#game').offset().left;
       playerX = (touchX-30)*scale;
     });
     break;
   }
 
-  cannonX =600;
+  cannonX =610;
   groundY = 400;
   cannonRot = Math.PI/4;
   playerX = 100;
