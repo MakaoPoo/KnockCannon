@@ -59,8 +59,7 @@ function mainStart() {
       let width = $('#game').width();
       let scale = 650/width;
       let touchX = event.touches[0].pageX - $(event.target).offset().left;
-      playerX = touchX*scale;
-      console.log(event);
+      playerX = (touchX-30)*scale;
     });
     break;
     case "pc":
@@ -70,8 +69,7 @@ function mainStart() {
       let width = $('#game').width();
       let scale = 650/width;
       let touchX = event.originalEvent.clientX - $(event.target).offset().left;
-      playerX = touchX*scale;
-      console.log(event);
+      playerX = (touchX-30)*scale;
     });
     break;
   }
@@ -103,8 +101,8 @@ function main() {
 }
 
 function moveGame() {
-  if (playerX < 0) {
-    playerX = 0;
+  if (playerX < -10) {
+    playerX = -10;
   }
   if (playerX > 420) {
     playerX = 420;
